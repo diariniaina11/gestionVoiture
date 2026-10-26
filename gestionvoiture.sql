@@ -13,6 +13,14 @@ SET time_zone = "+00:00";
 CREATE DATABASE IF NOT EXISTS `gestionvoiture`;
 USE `gestionvoiture`;
 
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(254) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_email_unique` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;

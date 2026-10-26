@@ -14,4 +14,3 @@ class connexion {
         return self::$pdo;
     }
 }
-?>
